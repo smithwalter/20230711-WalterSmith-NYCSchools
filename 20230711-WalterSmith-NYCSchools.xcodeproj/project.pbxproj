@@ -18,7 +18,8 @@
 		5F0345C32A5E566D0013C223 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0345C22A5E566D0013C223 /* School.swift */; };
 		5F0345C52A5E5E240013C223 /* NYCSchoolsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0345C42A5E5E240013C223 /* NYCSchoolsService.swift */; };
 		5F0345C72A5E69CE0013C223 /* NYCSchoolsSchoolDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0345C62A5E69CE0013C223 /* NYCSchoolsSchoolDetailService.swift */; };
-		5F0345C92A5E6B6E0013C223 /* SchoolDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0345C82A5E6B6E0013C223 /* SchoolDetails.swift */; };
+		5F0345C92A5E6B6E0013C223 /* SchoolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0345C82A5E6B6E0013C223 /* SchoolDetail.swift */; };
+		5F0345CB2A5F0A720013C223 /* NYCSchoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0345CA2A5F0A720013C223 /* NYCSchoolDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,8 @@
 		5F0345C22A5E566D0013C223 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		5F0345C42A5E5E240013C223 /* NYCSchoolsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsService.swift; sourceTree = "<group>"; };
 		5F0345C62A5E69CE0013C223 /* NYCSchoolsSchoolDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsSchoolDetailService.swift; sourceTree = "<group>"; };
-		5F0345C82A5E6B6E0013C223 /* SchoolDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetails.swift; sourceTree = "<group>"; };
+		5F0345C82A5E6B6E0013C223 /* SchoolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetail.swift; sourceTree = "<group>"; };
+		5F0345CA2A5F0A720013C223 /* NYCSchoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +110,9 @@
 				5F0345982A5E3EAC0013C223 /* NYCSchoolsContentView.swift */,
 				5F0345C02A5E552D0013C223 /* NYCSchoolsContentViewDelegate.swift */,
 				5F0345C22A5E566D0013C223 /* School.swift */,
-				5F0345C82A5E6B6E0013C223 /* SchoolDetails.swift */,
+				5F0345C82A5E6B6E0013C223 /* SchoolDetail.swift */,
 				5F03459A2A5E3EAC0013C223 /* Assets.xcassets */,
+				5F0345CA2A5F0A720013C223 /* NYCSchoolDetailView.swift */,
 				5F03459C2A5E3EAC0013C223 /* Preview Content */,
 				5F0345C42A5E5E240013C223 /* NYCSchoolsService.swift */,
 				5F0345C62A5E69CE0013C223 /* NYCSchoolsSchoolDetailService.swift */,
@@ -272,11 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0345CB2A5F0A720013C223 /* NYCSchoolDetailView.swift in Sources */,
 				5F0345992A5E3EAC0013C223 /* NYCSchoolsContentView.swift in Sources */,
 				5F0345972A5E3EAC0013C223 /* _0230711_WalterSmith_NYCSchoolsApp.swift in Sources */,
 				5F0345C12A5E552D0013C223 /* NYCSchoolsContentViewDelegate.swift in Sources */,
 				5F0345C72A5E69CE0013C223 /* NYCSchoolsSchoolDetailService.swift in Sources */,
-				5F0345C92A5E6B6E0013C223 /* SchoolDetails.swift in Sources */,
+				5F0345C92A5E6B6E0013C223 /* SchoolDetail.swift in Sources */,
 				5F0345C32A5E566D0013C223 /* School.swift in Sources */,
 				5F0345C52A5E5E240013C223 /* NYCSchoolsService.swift in Sources */,
 			);

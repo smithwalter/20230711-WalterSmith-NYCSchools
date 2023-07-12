@@ -12,35 +12,43 @@ class NYCSchoolsContentViewDelegate : NSObject,
                                       NYCSchoolsServiceDelegate,
                                       NYCSchoolDetailsServiceDelegate,
                                       NYCSchoolDetailViewDelegate {
+    
 
+    // This data doesn't change much and should be placed in a persistent store
+    // TODO: add coredata
     @Published var schools : [School]
-    @Published var details : SchoolDetails
+    var schoolDetails : [SchoolDetail]
     
     var _schoolService : NYCSchoolsService
     var _detailsService : NYCSchoolDetailsService
     
-    func SchoolDetailsUpdated(_ schoolDetails: SchoolDetails) {
-        self.details = schoolDetails
+    func SchoolDetailsUpdated(_ schoolDetails: [SchoolDetail]) {
+        self.schoolDetails = schoolDetails
     }
     
+    // Sorting by name. Would love to add options, but time constraints
     func SchoolsListUpdated(_ schools: [School]) {
-        self.schools = schools
+        self.schools = schools.sorted(by: {$0.school_name < $1.school_name})
     }
     
-    func getDetails(forSchool : String) {
-        _detailsService.getSchoolDetails(forSchool)
+    // Using a filter to search an array. Will need to use a more efficient method if dataset gets significantly bigger
+    func getDetails(forSchool : School) -> SchoolDetail? {
+        let details = schoolDetails.filter({$0.dbn == forSchool.dbn})
+        return details.count > 0 ? details[0] : nil
     }
     
     override init() {
         self.schools = [School]()
-        self.details = SchoolDetails(dbn: "", school_name: "", num_of_sat_test_takers: "", sat_critical_reading_avg_score: "0", sat_math_avg_score: "0", sat_writing_avg_score: "0")
+        self.schoolDetails = [SchoolDetail]()
         self._schoolService = NYCSchoolsService()
         self._detailsService = NYCSchoolDetailsService()
         
         super.init()
         
+        // Data doesn't change muchm so updating on app load should be enough
         _schoolService.delegate = self
         _detailsService.delegate = self
         _schoolService.getSchools()
+        _detailsService.getSchoolDetails()
     }
 }

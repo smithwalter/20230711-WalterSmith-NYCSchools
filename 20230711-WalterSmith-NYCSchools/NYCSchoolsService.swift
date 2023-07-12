@@ -23,6 +23,8 @@ class NYCSchoolsService {
             }
         }
     }
+    
+    // it was easier to just download the dataset and read it from XCAssets
     func getTestSchools() -> Data? {
         if let asset = NSDataAsset(name: "s3k6-pzi2") {
                 return asset.data

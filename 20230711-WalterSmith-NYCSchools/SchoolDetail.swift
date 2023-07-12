@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SchoolDetails : Decodable {
+struct SchoolDetail : Codable {
     let dbn : String
     let school_name : String
     let num_of_sat_test_takers : String
