@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "f9bf-2cp4.json",
+      "idiom" : "universal",
+      "universal-type-identifier" : "public.json"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
