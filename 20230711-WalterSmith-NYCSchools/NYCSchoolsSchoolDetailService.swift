@@ -18,6 +18,7 @@ class NYCSchoolDetailsService {
         getSchoolDetailsFromService()
     }
     func createURI() -> String {
+        // was planning to use api functionality to fetch data school by school, but didn't have time to get synchronicity right.
         return "https://data.cityofnewyork.us/resource/f9bf-2cp4.json"//?dbn=\(dbn)"
     }
     func getSchoolDetailsFromService() {
